@@ -15,7 +15,7 @@
 
 
 import java.util.Scanner;
-import java.util.Random;
+
 
 public class GuessingGame {
     public static void main(String[] args) {
@@ -24,8 +24,8 @@ public class GuessingGame {
         System.out.println("I am thinking about a number between 1 and 10...\nCan you guess it?");
         int num = input.nextInt();
         //create Random object and generate random number
-        Random randomGen = new Random();
-        int randomInt = randomGen.nextInt(10);
+        // cast the double random number into an int type
+        int randomInt = (int) (Math.random()*10);
 
         while (num != randomInt){
 
@@ -47,21 +47,8 @@ public class GuessingGame {
 /********************Test case **********
  * I am thinking about a number between 1 and 10...
  * Can you guess it?
- * 1
- * It's too high. Guess again.
- * 9
- * It's too high. Guess again.
- * 2
- * It's too high. Guess again.
- * 9
- * It's too high. Guess again.
- *
- * 8
- * It's too high. Guess again.
- * 3
- * It's too high. Guess again.
- * 0
+ * 4
+ * It's too low. Guess again.
+ * 5
  * That's right! You are a good guesser.
  */
-
-
